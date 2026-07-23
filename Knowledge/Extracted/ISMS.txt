@@ -1,0 +1,198 @@
+1 Document Information
+1.1 Revision History
+1.2 Document Review
+1.3 Distribution
+Acceptable Use Policy
+Acceptable Use Policy
+2 Introduction
+Achala provides computer devices, networks, and other electronic information systems to meet missions, goals, and initiatives and must manage them responsibly to maintain the confidentiality, integrity, and availability of its information assets. This policy requires the users of information assets to comply with company policies and practices the company against damaging legal issues.
+3 Purpose
+The purpose of this policy is to establish rules for acceptable and unacceptable use of electronic devices and network resources and to aid in conjunction with its established culture of ethical and lawful behaviour, openness, trust, and integrity.
+4 Scope
+This policy for Achala includes all personnel including employees, contractors, suppliers, and others who are responsible for information or have any form of access that supports or requires access to any system that resides at any Achala's facility.
+5 Acceptable Use Policy
+5.1 General
+Users are required to use and manage Achala computing resources responsibly, in a way that maintains the confidentiality, integrity, and availability of its information assets. 
+Users are responsible for protecting any information used and/or stored on/in their Achala assets assigned to them. 
+Preventing the misuse of the assigned Access Card is the responsibility of the cardholder. 
+Employees should not leave printed/faxed documents at the printers/fax machines unattended. 
+Users shall cooperate and support in the activity of fire drill, maintaining security compliance, and in updating and maintenance of patches, laptops, applications etc. as and when required. 
+Anomalies in systems and networks (e.g. suspicion of virus attacks, malicious code, loss or compromise of passwords, theft of equipment like hard disks, laptops, blackberry, portable storage devices etc.) shall be promptly reported as a security incident. 
+For physical loss or theft of asset, Admin & facility team should be notified simultaneously by sending email or by reaching out to the appropriate communication channel. This communication must flow from either user or user's Department Head. 
+Internet and e-mail should only be used for business-related information exchange only, and private use should not be done. 
+Limited and occasional use of Achala systems for blogging is acceptable as long as it does not otherwise violate Achala policies and not detrimental to Achala's best interests. 
+Users are expected to read thoroughly and abide by the Password Guidelines as mentioned in Password Policy. 
+If additional software is required, this shall be installed and configured by authorized IT personnel. Achala can at any time remove/uninstall such software from the infrastructure or workstations if the requirement is no longer justified for business or noticed that it is not needed for business. 
+Achala IT Solutions									Internal
+5.1 General (Continued)
+Appropriate security approval should be gained for use of removable media within Achala. 
+Before leaving the workstation, the user must always log off or lock the workstation. 
+Employees should clear their workstations/desks before leaving for meetings, lunch or at the end of day. Cabinets should be locked when not in use. 
+Users shall not make copies of system configuration files for their own, personal use or to provide to other people/users for unauthorized uses. 
+Prior to termination of employment, the employee should make relevant business information accessible to the reporting manager. 
+Downloads from the Internet must be screened for viruses before accessing. 
+Users, if using a smartphone/tablet for accessing corporate emails, should ensure password protection or other means of authentication should be enabled on the smartphone/tablet. 
+Installation of Antivirus program is advisable to ensure protection from virus/malware etc. 
+Users must not place any Achala's classified information in a publicly accessible Internet site that supports FTP or similar services without prior approval. 
+Users are responsible for protecting any information used and/or stored in their Achala accounts. 
+Users must use extreme caution when opening e-mail attachments received from unknown senders, which may contain viruses, e-mail bombs, or Trojan horse code or having extensions like .exe, .bat, .vbs, etc. 
+Periodic awareness and training on Information Security shall be conducted to facilitate user understanding and compliance to the policies. It is mandatory for each user to participate / attend the training at least once every year. 
+The data on Achala's network shall be the property of Achala and any unauthorized access, copying, modification or destruction of the data is prohibited. 
+For use of any additional technologies, employees require explicit management approval in conjunction with one's professional roles and responsibilities. 
+5.2 Computing Assets
+You are responsible for ensuring the protection of assigned Achala assets that includes the use of "computer cable locks" and other security devices. Laptops left at Achala facility overnight must be properly secured or placed in a locked drawer or cabinet. Promptly report any theft of Achala assets to the IT team.
+All PCs, PDAs, laptops, and workstations must be secured with a password-protected screensaver with the automatic activation feature set to 5 minutes or less. 
+Laptops must be properly and securely stored when not in use. 
+Laptops must not be left in an unattended car and when in transit in a car they must be locked in the boot. 
+Users shall keep on saving important documents on the respective cloud storage to ensure that work is not lost if a laptop goes missing. 
+Users must not keep their laptops in "Hibernate" mode. They must be properly closed down (i.e., selecting shutdown or equivalent option from the respective operating system menu) when not in use and secured in a suitable locked cabinet within their place of work. 
+Achala IT Solutions								Internal
+5.2 Computing Assets (Continued)
+Any user who intends to leave a laptop/PC for any period must ensure that it is left in "Locked" (Example: on Windows, by pressing Ctrl + Alt + Del and choosing "Lock this computer" or pressing Windows key + L). 
+Only approved users with administrator privileges on their PCs will be allowed to: 
+Reinstall licenses/approved Software application. 
+Execute Licensed/approved Software application that does not run without admin privilege. 
+The same must be requested by raising a request to IT with approval from the Department Head. 
+Damage to (including suspected tampering) or loss of the Laptop must be reported to the Administration or IT team who will advise on the action that must be taken. 
+Users shall not attempt to disable/alter the software/configuration of PCs/laptops. 
+5.3 Passwords
+Users shall follow the rules outlined in Achala's Password Policy to manage and handle passwords.
+5.4 Network and System Activities
+The following activities are strictly prohibited:
+Port scanning or security scanning unless prior permission is sought from the Information Security Team or required as part of an employee's normal job duty. 
+Users shall not attempt to connect to any server/Network element that they do not have authority to access or needed to carry out their job functions. 
+Executing any form of network monitoring which will intercept data not intended for the employee's or contractor's host unless this activity is a part of the employee's/contractor's normal job duty. 
+Effecting security breaches or disruptions of network communications. Security breaches include, but are not limited to, accessing data of which the employee/contractor/third party user is not an intended recipient or logging into a server or account that the employee/contractor is not expressly authorized to access. For purposes of this section, "disruption" includes, but is not limited to, network sniffing, pinged floods, packet spoofing, denial of service, and forged routing information for malicious purposes. 
+Introduction of malicious programs into the network or server (e.g., viruses, worms, Trojan horses, e-mail bombs, etc.). 
+Revealing account password to others or allowing use of account by others. This includes family and other household members when work is being done at home. 
+Making copies of system configuration files for users' own, unauthorized personal use or to provide to other people/users for unauthorized use. 
+Using any program/script/command or sending messages of any kind with the intent to interfere with or disable a user's terminal session via any means locally or via the Internet/Internet/Extranet unless this activity is a part of the employee's normal job duty. 
+Circumventing user authentication or security of any host, network, or account. 
+Achala IT Solutions									Internal
+5.4 Network and System Activities (Continued)
+Downloading, installing, or running security programs or utilities which reveal weaknesses in the security of a system. 
+Users with administrator privileges on their PCs will not be allowed to: 
+Reset the local Administrator account password. 
+Uninstall existing software installed by Achala's IT Team. 
+Uninstall/disable Antivirus software. 
+Disable local firewall. 
+Create/modify/remove any user accounts. 
+Sharing the folder with permission given to everyone. 
+5.5 Internet
+Users shall not attempt to use or allow Achala's Internet Service to be used to:
+Engage in any activity that is illegal under local, state, or international law. 
+Access or download unauthorized and non-business-related software, including but not limited to games, game upgrades or related software. 
+Download, transmit, view or store material which could be considered as pornographic, vulgar or profane, insulting, defamatory or offensive to any individual or organization; and which could harm Achala's status or reputation. 
+Use unapproved chat software (e.g., IRC, MIRC, Yahoo, Messenger, MSN Messenger etc.). Approval must be taken for using unapproved chat software in case of any business requirement. 
+Conduct an act of electronic harassment of any kind. 
+Send or distribute unsolicited advertising, bulk electronic messages, or overload any network or system. 
+Access, monitor or use any data, systems, or networks, including another person's private information, without authority or attempt to probe, scan or test the vulnerability of any data, system or network. 
+Obtaining unauthorized access to or knowingly modifying information held on Internet resources. 
+Access to the Internet from Achala's computers has been provided as a business resource. Inappropriate personal use will be treated as a disciplinary offence. Achala reserves the right to monitor Internet traffic for the purpose of preventing any activity that may be illegal, unauthorized, or harmful to the Company, its employees/contractors, customers or business partners. Achala also retains the right to block access to any Internet website/category of websites/online services as it deems appropriate.
+5.6 Wireless Networks
+Users shall not use Achala's wireless networks in a way that violates law or the established processes/policies of Achala. 
+Achala Wireless network is for official use only. Users shall not use the same for any other purpose. 
+Achala IT Solutions									Internal
+5.6 Wireless Networks (Continued)
+Users shall not attempt to deceive others about their identity in electronic communications or other network traffic. 
+Users shall not use Wireless networks to threaten, intimidate, or harass other individuals. 
+If any personal Wireless networks (Wi-Fi Dongle or Mobile Hotspot) of a user sends disruptive signals, or violates any of the above requirements, it will constitute a violation of Achala's policies and could result in disciplinary actions. 
+The Wireless network may be subject to monitoring, with cause, for security, legal, or troubleshooting purposes. This may include monitoring for bandwidth usage, security related incidents, or a request from legal/law enforcement authorities. In addition, Achala reserves the right to scan the network to assist in identifying and protecting against exploitable security vulnerabilities (e.g., viruses or worms) without prior notice by monitoring network integrity. Information gathered in such scans will be used only for the explicit purpose of monitoring network security.
+5.7 E-mail
+All message generated by e-mail shall be the property of Achala. Users shall safeguard their e-mail account by creating strong passwords as per the Achala's password requirements. Users should not disclose their password to anyone else under any circumstances.
+The following activities are strictly prohibited:
+Sending implied or explicit messages which criticize other individuals or organizations. 
+Sending or forwarding emails containing defamatory, offensive, or obscene expressions. 
+Posting by employees from Achala email address to any newsgroups, unless posting is related to business duties. 
+Making fraudulent offers of products, items, or services. 
+Any form of harassment via email, whether through language, frequency, or size of messages. 
+Unauthorized use, or forging, of email header information. 
+Creating or forwarding "chain mails". 
+Knowingly distributing files that contain viruses, spyware, Trojan horses, worms, time bombs, cancel bots, corrupted files, root kits or any other similar software or programs that may damage the operation of another's computer, network system or other property. 
+Accessing/access others' email accounts. 
+Opening e-mails or attached files without ensuring that the content appears legitimate. 
+5.8 Spam
+Users shall not use or allow their email/Internet service to be used for:
+Sending multiple unsolicited electronic mail messages or "mail-bombing" to one or more recipients. 
+Sending unsolicited commercial e-mail, or unsolicited electronic messages directed primarily at the advertising or promotion of products or services. 
+Using redirect links in unsolicited commercial e-mail to advertise a website or service. 
+Using another computer, without authorization, to send multiple e-mail messages or to retransmit e-mail messages for the purpose of misleading recipients to conduct any of the prohibited activities under this policy. 
+Achala IT Solutions									Internal
+5.8 Spam (Continued)
+Falsifying packet header, sender, or user information whether in whole or in part to mask the identity of the sender, originator or point of origin. 
+Using or distributing any software designed to harvest email addresses. 
+Hosting any device or service that allows email to be sent between third parties not under Achala authority or control. 
+Users can reduce the amount of Spam by following the below mentioned practices: 
+Use separate email addresses for different purposes, such as a personal email address for friends and family and a business email address for work. 
+Do not open emails from dubious sources. 
+Do not reply to Spam or click on links, including "unsubscribe" facilities, in Spam. 
+Do not accept Spam-adjusted offers. 
+Do not post your email address on publicly available sites or directories. If you must do so, look for options, such as tick boxes, that allow you to opt out of receiving further offers or information. 
+Do not disclose your personal information to any online organization unless they agree not to pass your information to other parties. 
+Report any Spam you receive to IT Team. 
+5.9 Secure Logon Procedures
+All users shall be authenticated before they are granted access to Operating System and applications. 
+The log-on procedure shall disclose minimum information about the system to avoid providing an unauthorized user with any unnecessary assistance. Following shall be considered while defining the log-on procedures: 
+If the login is unsuccessful, the error message shall not display which part of the login information was incorrect. 
+Limit the number of unsuccessful log-on attempts. 
+Password shall not be displayed while it is being entered. 
+As far as possible login information shall not be sent in clear text over the internal Achala network. 
+Session Time-out 
+Inactive sessions (Application sessions, VPN sessions, Administration Sessions etc.) shall be shut down where feasible after a defined period of inactivity. 
+Intranet sites may be exempted from the requirement of session time-out. 
+Session time-out requirements shall be implemented for all the IT systems as feasible and applicable; and 
+Re-authentication may be considered at timed intervals. 
+5.10 VPN
+Users with remote access privileges shall directly access only those services that they are specifically authorized to use. 
+Only VPN client software distributed by Achala must be used to connect to the Achala VPN. Approved users can download the VPN client and installation instructions from Achala. 
+Achala IT Solutions									Internal
+5.10 VPN (Continued)
+Users must take all kinds of responsibility for breach or unauthorized access/activity using his/her account. 
+Approved users are responsible for the installation of the VPN software. 
+Peer-to-peer software is not allowed over VPN. 
+All users must install anti-virus software on each computer from which the VPN is accessed. 
+The anti-virus software must be updated regularly with new anti-virus definitions. Also, all users are required to keep their computer updated with the latest operating system and software patches. 
+It is the responsibility of the user with VPN privilege to ensure that unauthorized users are not allowed access to the Achala network. 
+Users shall not use the VPN for web surfing that does not otherwise require it for access. In other words, when the user has completed accessing the Achala Intranet / Secure Achala Cloud, they must end the VPN session prior to normal web access. 
+Users must ensure that the computer used to connect to Achala internal networks via VPN or any other technology must use properly configured, up-to-date anti-virus software. 
+Achala reserves the right to audit all VPN client systems, and all communication between VPN client systems and the Achala network for compliance with all applicable Information Security Services security requirements. 
+To maintain security, VPN services will be terminated immediately if any suspicious activity is found. Service may also be disabled until the issue has been identified and resolved. Any Achala employee found to have intentionally violated the VPN Acceptable Use will be subject to loss of VPN privileges. 
+5.11 Personal Information
+Users are expected to respect the privacy of others. Any attempt to gain access to private information or passwords (via technological or social means) is prohibited. Any form of identity theft or the compromising of another individual's personal information is strictly prohibited. 
+Users in custody of personal information of employees/customers shall not disclose the same to any third party except if agreed through contractual agreements for business purposes. If Achala consigns handling of personal data to a subcontractor, Achala will select an entity that is deemed as handling personal data appropriately and manage the contracted entity as necessary and appropriately so that entrusted data is under safe control. 
+Employees shall not remove records containing personal information from the office unless it is necessary for the purposes of carrying out their job duties, post required approvals. 
+Paper records containing personal information should be securely packaged in folders to protect against disclosure/theft. 
+Personal information should never be viewed on a laptop screen while travelling on public transportations. 
+Employees are prohibited from sending personal information by e-mail or fax unless it is necessary to do so for business purposes. 
+Any breach of privacy or loss or theft of personal information should be reported immediately to the IT Team, who may launch an investigation, if necessary. 
+Achala IT Solutions									Internal
+5.12 Copyrights
+Achala supports the rights of copyright owners and does not and will not tolerate copyright infringement. 
+Users shall not use Achala's resources to copy, adapt, reproduce, distribute or otherwise make available to other persons any content or material (for example, software, database files, documentation, cartoons, articles, graphic files, music files, video files, text and down loaded information) which is subject to copyright or do any other acts in relation to this copyright material which would infringe the exclusive rights of the copyright owner or any applicable law. 
+Users shall not transmit, distribute, download, copy, cache, host, or otherwise store any information, data, material, or work that infringes the intellectual property rights of others. 
+Installation of unlicensed software is strictly prohibited. Disciplinary action shall be taken if unlicensed software is found on PC/Laptop assigned to the user. 
+5.13 Software
+Achala will provide copies of legally acquired software to meet all legitimate needs in a timely fashion and in sufficient quantities for all its computers. The use of software obtained from any other source could present security and legal threats to the company, and such use is strictly prohibited. 
+End users shall be prohibited from installing any new software or hardware on any Achala device, including desktop computers, servers, or portable computers, without prior approval. All new software, not covered under the authorized software list must be approved by IT team before installation on informations systems. 
+Software requests must first be approved by the requester's Department Head and IT Team; and then be honored to the IT. 
+Software must be selected from the approved software list, maintained by the IT Team. 
+Access to system utilities should be granted only to privileged users who are authorized and have a business case for accessing the specific system utility. If the utility supports different privilege levels, it should be ensured that the privilege level is set based on need to know need to do basis. 
+The system utilities should be kept separate from other normal user utilities/programs. At any point, a normal user should not be able to gain unauthorized access to any of the system utilities. 
+All default system utilities that are considered unnecessary, installed during commissioning of a new information system should be deleted/uninstalled. 
+Equipment/applications are provided with diagnostic ports for remote diagnostic/maintenance tasks through system utilities. Access to such ports should be restricted only to authorized sources. 
+If the system utilities are used for remote administration/maintenance tasks, remote access should be limited from pre-defined IP / Host addresses. 
+All changes and activities performed by privileged users using system utility need to be logged and monitored. 
+Achala IT Solutions									Internal
+5.13 Software (Continued)
+Software shall not be duplicated, reproduced, or installed on more than one machine without prior written authorization of IT Team. 
+If a software license states it is eligible and approved for multiple use, the following conditions must be adhered to: 
+Use of the software is limited to Achala business. 
+The software must be removed from the computer if the individual is no longer employed by Achala. 
+Achala reserves the right to decline any software request that: 
+Causes conflicts with currently installed software. 
+Poses security risks. 
+Achala has the authority to uninstall any unauthorized software or hardware if discovered. 
+Achala reserves the right to protect its reputation and its investment in computer software by enforcing strong internal controls to prevent the making or use of unauthorized copies of software and related material. These controls may include periodic assessments of software use, announced and unannounced audits of company computers to assure compliance, the removal of any software found on Achala's property for which a valid license or proof of license cannot be determined, and disciplinary actions. 
+6 Enforcement
+Any employee is found to have violated this policy is subject to disciplinary action, up to and including termination of employment. A violation of this policy by a temporary worker, contractor or vendor may result in the termination of their contract or assignment with Achala. If a criminal offense is considered to have been committed, further legal action may be taken as appropriate.
+Achala IT Solutions

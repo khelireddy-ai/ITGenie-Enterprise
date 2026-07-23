@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+openai
+langchain
+langchain-community
+langchain-openai
+chromadb
+pypdf
+python-docx
+sentence-transformers
+python-dotenv
+pandas
+openpyxl
+tiktoken
+numpy

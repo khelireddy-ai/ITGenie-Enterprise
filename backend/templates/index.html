@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ITGenie Enterprise</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <div class="logo">
+
+            🤖 <span>ITGenie</span>
+
+            <small>Enterprise AI Knowledge Assistant</small>
+
+        </div>
+
+        <div class="status">
+
+            🟢 AI Online | Llama 3.1
+
+        </div>
+
+    </div>
+
+
+    <!-- Main -->
+
+    <div class="main">
+
+
+        <!-- Sidebar -->
+
+        <div class="sidebar">
+
+            <h3>📚 Knowledge Base</h3>
+
+            <div class="menu">🔐 ISMS</div>
+
+            <div class="menu">💻 Secure Coding</div>
+
+            <div class="menu">☁ Azure</div>
+
+            <div class="menu">🐧 Linux</div>
+
+            <div class="menu">🖥 Mainframe</div>
+
+            <hr>
+
+            <h3>💡 Suggested Questions</h3>
+
+            <div class="question" onclick="fillQuestion('What is ISMS?')">
+                What is ISMS?
+            </div>
+
+            <div class="question" onclick="fillQuestion('What is Secure Coding?')">
+                What is Secure Coding?
+            </div>
+
+            <div class="question" onclick="fillQuestion('Explain SQL Injection')">
+                Explain SQL Injection
+            </div>
+
+            <div class="question" onclick="fillQuestion('Password Policy')">
+                Password Policy
+            </div>
+
+            <div class="question" onclick="fillQuestion('Azure RBAC')">
+                Azure RBAC
+            </div>
+
+        </div>
+
+
+
+        <!-- Content -->
+
+        <div class="content">
+
+
+            <!-- Dashboard -->
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h2>560+</h2>
+
+                    <p>Knowledge Documents</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>100</h2>
+
+                    <p>FAQs</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>Llama 3.1</h2>
+
+                    <p>AI Model</p>
+
+                </div>
+
+                <div class="card">
+
+                    <h2>Online</h2>
+
+                    <p>Status</p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Chat -->
+
+            <div class="chat-container">
+
+                <div id="chatBox" class="chat-box">
+
+                    <div class="bot-message">
+
+                        <h2>👋 Welcome to ITGenie</h2>
+
+                        <p>
+
+                            Ask anything related to
+
+                            <b>ISMS</b>,
+
+                            <b>Secure Coding</b>,
+
+                            <b>Azure</b>,
+
+                            <b>Linux</b>
+
+                            or
+
+                            <b>Mainframe</b>.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Search -->
+
+                <div class="input-area">
+
+                    <input
+
+                        id="question"
+
+                        type="text"
+
+                        placeholder="Ask anything about your organization..."
+
+                        onkeypress="if(event.key==='Enter') askQuestion()"
+
+                    >
+
+                    <button onclick="askQuestion()">
+
+                        🚀 Ask
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>

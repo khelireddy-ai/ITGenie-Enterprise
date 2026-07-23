@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ITGenie AI Assistant</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:240px;
+    background:#1f2937;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin:15px 0;
+}
+
+.sidebar a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    padding:10px;
+    border-radius:8px;
+}
+
+.sidebar a:hover{
+    background:#374151;
+}
+
+/* Main */
+
+.main{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    padding:25px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.chat-box{
+    flex:1;
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    overflow-y:auto;
+    box-shadow:0 3px 8px rgba(0,0,0,.1);
+}
+
+.message{
+    margin-bottom:18px;
+}
+
+.user{
+    color:#2563eb;
+    font-weight:bold;
+}
+
+.ai{
+    color:#059669;
+    font-weight:bold;
+}
+
+.answer{
+    margin-top:5px;
+    white-space:pre-wrap;
+    line-height:1.6;
+}
+
+.input-area{
+    display:flex;
+    gap:10px;
+    margin-top:20px;
+}
+
+#question{
+    flex:1;
+    padding:14px;
+    font-size:16px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    padding:14px 30px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2>ITGenie</h2>
+
+<ul>
+
+<li><a href="/">🏠 Dashboard</a></li>
+
+<li><a href="/assistant">🤖 AI Assistant</a></li>
+
+<li><a href="/policy">📄 Policy Management</a></li>
+
+<li><a href="/risk">⚠️ Risk Management</a></li>
+
+<li><a href="/compliance">🛡️ Compliance</a></li>
+
+<li><a href="/audit">📋 Internal Audit</a></li>
+
+</ul>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+<div class="header">
+
+<h1>AI Assistant</h1>
+
+<h3>🟢 Ollama Online</h3>
+
+</div>
+
+<div id="chat" class="chat-box">
+
+<div class="message">
+<div class="ai">ITGenie</div>
+<div class="answer">
+Hello! Ask me anything about ISMS, ISO 27001, policies, audits or risks.
+</div>
+</div>
+
+</div>
+
+<div class="input-area">
+
+<input
+type="text"
+id="question"
+placeholder="Ask ITGenie..."
+>
+
+<button onclick="askAI()">
+Send
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const input=document.getElementById("question");
+
+input.addEventListener("keydown",function(event){
+
+    if(event.key==="Enter"){
+
+        event.preventDefault();
+
+        askAI();
+
+    }
+
+});
+
+async function askAI(){
+
+    const question=input.value.trim();
+
+    if(question==="") return;
+
+    const chat=document.getElementById("chat");
+
+    chat.innerHTML+=`
+    <div class="message">
+        <div class="user">You</div>
+        <div class="answer">${question}</div>
+    </div>
+    `;
+
+    input.value="";
+
+    chat.innerHTML+=`
+    <div class="message" id="loading">
+        <div class="ai">ITGenie</div>
+        <div class="answer">Thinking...</div>
+    </div>
+    `;
+
+    chat.scrollTop=chat.scrollHeight;
+
+    try{
+
+        const response=await fetch("/ask",{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify({
+                question:question
+            })
+
+        });
+
+        const data=await response.json();
+
+        document.getElementById("loading").remove();
+
+        const formatted=data.answer.replace(/\n/g,"<br>");
+
+        chat.innerHTML+=`
+        <div class="message">
+            <div class="ai">ITGenie</div>
+            <div class="answer">${formatted}</div>
+        </div>
+        `;
+
+    }
+
+    catch(error){
+
+        document.getElementById("loading").remove();
+
+        chat.innerHTML+=`
+        <div class="message">
+            <div class="ai">ITGenie</div>
+            <div class="answer">
+            Unable to contact AI service.
+            </div>
+        </div>
+        `;
+
+    }
+
+    chat.scrollTop=chat.scrollHeight;
+
+}
+
+</script>
+
+</body>
+</html>
