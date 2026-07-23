@@ -60,17 +60,9 @@ jobs:
         with:
           name: python-app
       
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A8CA7C44F6B14E358D1F46FA2D92E071 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B9C77CD3D0E74E0CA77D5C8C9674881C }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_16F62AECA2AC4EB99F011C4E1ABC0B7F }}
-
-      - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v3
-        id: deploy-to-webapp
-        with:
-          app-name: 'itgenie-enterprise'
-          slot-name: 'Production'
-          
+- name: Deploy to Azure Web App
+  uses: azure/webapps-deploy@v3
+  with:
+    app-name: itgenie-enterprise
+    publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
+    package: .
