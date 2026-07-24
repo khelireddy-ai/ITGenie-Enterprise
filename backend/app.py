@@ -9,15 +9,19 @@ from services.policy_service import generate_policy
 from services.llm_service import ask_llm
 
 # -------------------------------------------------
-# Load RAG safely (Azure compatible)
+# Try loading RAG
 # -------------------------------------------------
 try:
     from rag import get_context
+    RAG_AVAILABLE = True
+    print("✅ RAG loaded successfully.")
 except Exception as e:
-    print("RAG disabled:", e)
+    print("⚠ RAG disabled:", e)
+    RAG_AVAILABLE = False
 
     def get_context(question):
         return None
+
 
 # -------------------------------------------------
 # FastAPI App
@@ -26,15 +30,18 @@ app = FastAPI(title="ITGenie Enterprise")
 
 initialize_database()
 
+
 # -------------------------------------------------
 # Static Files
 # -------------------------------------------------
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
+
 # -------------------------------------------------
 # Templates
 # -------------------------------------------------
 templates = Jinja2Templates(directory="templates")
+
 
 # -------------------------------------------------
 # Request Models
@@ -55,8 +62,8 @@ class PolicyRequest(BaseModel):
 @app.get("/", response_class=HTMLResponse)
 async def dashboard(request: Request):
     return templates.TemplateResponse(
-        "dashboard.html",
-        {"request": request}
+        request=request,
+        name="dashboard.html",
     )
 
 
@@ -66,30 +73,30 @@ async def dashboard(request: Request):
 @app.get("/assistant", response_class=HTMLResponse)
 async def assistant(request: Request):
     return templates.TemplateResponse(
-        "assistant.html",
-        {"request": request}
+        request=request,
+        name="assistant.html",
     )
 
 
 # -------------------------------------------------
-# Policy Management
+# Policy
 # -------------------------------------------------
 @app.get("/policy", response_class=HTMLResponse)
 async def policy(request: Request):
     return templates.TemplateResponse(
-        "policy.html",
-        {"request": request}
+        request=request,
+        name="policy.html",
     )
 
 
 # -------------------------------------------------
-# Risk Management
+# Risk
 # -------------------------------------------------
 @app.get("/risk", response_class=HTMLResponse)
 async def risk(request: Request):
     return templates.TemplateResponse(
-        "risk.html",
-        {"request": request}
+        request=request,
+        name="risk.html",
     )
 
 
@@ -99,32 +106,31 @@ async def risk(request: Request):
 @app.get("/compliance", response_class=HTMLResponse)
 async def compliance(request: Request):
     return templates.TemplateResponse(
-        "compliance.html",
-        {"request": request}
+        request=request,
+        name="compliance.html",
     )
 
 
 # -------------------------------------------------
-# Internal Audit
+# Audit
 # -------------------------------------------------
 @app.get("/audit", response_class=HTMLResponse)
 async def audit(request: Request):
     return templates.TemplateResponse(
-        "audit.html",
-        {"request": request}
+        request=request,
+        name="audit.html",
     )
 
 
 # -------------------------------------------------
-# Health Check
+# Health
 # -------------------------------------------------
 @app.get("/health")
 def health():
     return {
         "status": "Running",
         "application": "ITGenie Enterprise",
-        "rag": "Enabled" if get_context(None) is not None else "Disabled",
-        "llm": "Ollama / Azure Ready"
+        "rag": RAG_AVAILABLE
     }
 
 
@@ -136,11 +142,13 @@ def ask(req: QuestionRequest):
 
     context = get_context(req.question)
 
-    if not context:
+    if context is None:
+        answer = ask_llm(req.question, "")
+
         return {
             "question": req.question,
-            "answer": "I couldn't find this information in the ITGenie knowledge base.",
-            "source": "Knowledge Base"
+            "answer": answer,
+            "source": "LLM Only (RAG Disabled)"
         }
 
     answer = ask_llm(req.question, context)
