@@ -1,3 +1,9 @@
+__import__("pysqlite3")
+import sys
+sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+
+from fastapi import FastAPI
+...
 from rag import get_context
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
