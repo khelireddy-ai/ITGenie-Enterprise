@@ -1,6 +1,12 @@
 from fastapi import FastAPI
 ...
-from rag import get_context
+   try:
+    from rag import get_context
+except Exception as e:
+    print("RAG disabled:", e)
+
+    def get_context(question):
+        return None
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
