@@ -1,23 +1,29 @@
-from fastapi import FastAPI
-...
-   try:
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
+from pydantic import BaseModel
+
+from database import initialize_database
+from services.policy_service import generate_policy
+from services.llm_service import ask_llm
+
+# -------------------------------------------------
+# Load RAG safely (Azure compatible)
+# -------------------------------------------------
+try:
     from rag import get_context
 except Exception as e:
     print("RAG disabled:", e)
 
     def get_context(question):
         return None
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse
-from fastapi.staticfiles import StaticFiles
-from fastapi.templating import Jinja2Templates
-from pydantic import BaseModel
-from database import initialize_database
-from services.policy_service import generate_policy
 
-from services.llm_service import ask_llm
-
+# -------------------------------------------------
+# FastAPI App
+# -------------------------------------------------
 app = FastAPI(title="ITGenie Enterprise")
+
 initialize_database()
 
 # -------------------------------------------------
@@ -49,8 +55,8 @@ class PolicyRequest(BaseModel):
 @app.get("/", response_class=HTMLResponse)
 async def dashboard(request: Request):
     return templates.TemplateResponse(
-        request=request,
-        name="dashboard.html",
+        "dashboard.html",
+        {"request": request}
     )
 
 
@@ -60,8 +66,8 @@ async def dashboard(request: Request):
 @app.get("/assistant", response_class=HTMLResponse)
 async def assistant(request: Request):
     return templates.TemplateResponse(
-        request=request,
-        name="assistant.html",
+        "assistant.html",
+        {"request": request}
     )
 
 
@@ -71,8 +77,8 @@ async def assistant(request: Request):
 @app.get("/policy", response_class=HTMLResponse)
 async def policy(request: Request):
     return templates.TemplateResponse(
-        request=request,
-        name="policy.html",
+        "policy.html",
+        {"request": request}
     )
 
 
@@ -82,8 +88,8 @@ async def policy(request: Request):
 @app.get("/risk", response_class=HTMLResponse)
 async def risk(request: Request):
     return templates.TemplateResponse(
-        request=request,
-        name="risk.html",
+        "risk.html",
+        {"request": request}
     )
 
 
@@ -93,8 +99,8 @@ async def risk(request: Request):
 @app.get("/compliance", response_class=HTMLResponse)
 async def compliance(request: Request):
     return templates.TemplateResponse(
-        request=request,
-        name="compliance.html",
+        "compliance.html",
+        {"request": request}
     )
 
 
@@ -104,8 +110,8 @@ async def compliance(request: Request):
 @app.get("/audit", response_class=HTMLResponse)
 async def audit(request: Request):
     return templates.TemplateResponse(
-        request=request,
-        name="audit.html",
+        "audit.html",
+        {"request": request}
     )
 
 
@@ -117,19 +123,20 @@ def health():
     return {
         "status": "Running",
         "application": "ITGenie Enterprise",
-        "llm": "Ollama Llama 3.1"
+        "rag": "Enabled" if get_context(None) is not None else "Disabled",
+        "llm": "Ollama / Azure Ready"
     }
 
 
 # -------------------------------------------------
-# Ask AI Assistant
+# Ask AI
 # -------------------------------------------------
 @app.post("/ask")
 def ask(req: QuestionRequest):
 
     context = get_context(req.question)
 
-    if context is None:
+    if not context:
         return {
             "question": req.question,
             "answer": "I couldn't find this information in the ITGenie knowledge base.",
@@ -143,6 +150,7 @@ def ask(req: QuestionRequest):
         "answer": answer,
         "source": "ITGenie Knowledge Base"
     }
+
 
 # -------------------------------------------------
 # Generate Policy

@@ -1,17 +1,31 @@
-from sentence_transformers import SentenceTransformer
-import chromadb
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-EMBEDDING_DIR = PROJECT_ROOT / "Embeddings"
+try:
+    from sentence_transformers import SentenceTransformer
+    import chromadb
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent
+    EMBEDDING_DIR = PROJECT_ROOT / "Embeddings"
 
-client = chromadb.PersistentClient(path=str(EMBEDDING_DIR))
-collection = client.get_collection("ITGenie")
+    model = SentenceTransformer("all-MiniLM-L6-v2")
+
+    client = chromadb.PersistentClient(path=str(EMBEDDING_DIR))
+    collection = client.get_collection("ITGenie")
+
+    RAG_ENABLED = True
+
+except Exception as e:
+    print("Chroma disabled:", e)
+
+    model = None
+    collection = None
+    RAG_ENABLED = False
 
 
 def get_context(question):
+
+    if not RAG_ENABLED:
+        return None
 
     embedding = model.encode(question).tolist()
 
